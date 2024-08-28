@@ -17,7 +17,8 @@ for string in commen we use double-qoute and if for some ression(we need double-
 
 # package
 
-the important thing in go is package witout specify package you get an error and cant run your programm([package image 1.packages.png](./images/1.packages.png)).
+the important thing in go is package witout specify package you get an error and cant run your programm
+![](../images/1.packages.png "package example")
 
 # why we use main as package name
 
@@ -95,3 +96,11 @@ go build
 ```
 
 notice: if your application dosent have main package with go build you didnet get file because you dont have entry for what is your bigining point of your app
+
+# main function
+
+you need main function to tell go where you should start executing the application unlike other languages like javascript that thay start executing the application from the first line of the file. in go you need to tell the application where is main function and where should start executing the application.
+
+notice: in go in main package you can't have more than one main function. so you can't have a main function in index.go and feature.go
+
+notice: if you wanna create a liberary you dont need a main function. because you import your method on other file.

@@ -136,3 +136,82 @@ When you use **fmt.Scan**, you're asking it to read input from the terminal and 
 Here, **&investmentAmount** gives the memory address of **investmentAmount**. This allows **fmt.Scan** to directly modify the value at that memory location with the input it receives.
 
 If you tried to use **fmt.Scan(investmentAmount)**, you'd be passing the value of **investmentAmount**, not its memory address and **fmt.Scan()** dont need value actully this method give us a value. The function wouldn't know where to store the input, and your program wouldn't work as intended.
+
+## Printf
+
+you can use Printf for print something in terminal with format.
+
+```go
+fmt.Printf("investmentAmount: %v, year: %v, futureValue: %v, futureReelValue: %v", investmentAmount, year, futureValue, futureReelValue)
+```
+
+as you can see we use %v for print value of varible(act like a placeholder). for more information about Printf you can see [here](https://pkg.go.dev/fmt#hdr-Printing)
+
+## Sprintf
+
+sometimes you need to store your print in a varible not printing in terminal. for this you can use Sprintf.
+
+```go
+var result = fmt.Sprintf("investmentAmount: %v, year: %v, futureValue: %v, futureReelValue: %v", investmentAmount, year, futureValue, futureReelValue)
+fmt.Println(result)
+```
+
+## function
+
+1. Basic Function Syntax: Functions in Go are defined using the func keyword, followed by the function name, parameters, and return type:
+
+```go
+func functionName(parameter1 type, parameter2 type) returnType {
+    // function body
+    return value
+}
+```
+
+2. Multiple Parameters: Functions can have multiple parameters of the same or different types:
+
+```go
+func add(x, y int) int {
+    return x + y
+}
+```
+
+3. Multiple Return Values: Go functions can return multiple values:
+
+```go
+func divide(x, y float64) (float64, error) {
+    if y == 0 {
+        return 0, errors.New("division by zero")
+    }
+    return x / y, nil
+}
+```
+
+4. Named Return Values: You can name return values in the function signature:
+
+```go
+func rectangle(width, height float64) (area, perimeter float64) {
+    area = width * height
+    perimeter = 2 * (width + height)
+    return // naked return
+}
+```
+
+5. Anonymous Functions: Go supports anonymous functions that can be assigned to variables or passed as arguments:
+
+```go
+square := func(n int) int {
+    return n * n
+}
+```
+
+6. Closures: Functions can capture and access variables from their outer scope:
+
+```go
+func adder() func(int) int {
+    sum := 0
+    return func(x int) int {
+        sum += x
+        return sum
+    }
+}
+```

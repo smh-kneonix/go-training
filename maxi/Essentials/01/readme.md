@@ -18,7 +18,7 @@ for string in commen we use double-qoute and if for some ression(we need double-
 # package
 
 the important thing in go is package witout specify package you get an error and cant run your programm
-![](../images/1.packages.png "package example")
+![](../../images/1.packages.png "package example")
 
 # why we use main as package name
 

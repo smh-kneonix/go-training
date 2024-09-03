@@ -72,7 +72,7 @@ var investmentAmount float64 = 1000 // 1000.0
 ```
 
 notice: here is some basic type in go:
-![](../images/basic-type.png "basic type in go")
+![](../../images/basic-type.png "basic type in go")
 
 ## store varible
 
